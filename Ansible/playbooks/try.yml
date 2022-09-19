@@ -1,0 +1,15 @@
+---
+- name: testing conditionals
+  hosts: testServer
+  remote_user: ec2-user
+  become: yes
+
+  vars:
+    singapore: true
+
+  tasks:
+  - name: open national anthem if singapore
+    shell: cat majulah.txt
+    register: var_output
+
+  - debug: var=var_output.stdout_lines
