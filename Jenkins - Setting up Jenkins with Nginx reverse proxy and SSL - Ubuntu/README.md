@@ -61,7 +61,7 @@
 
 - In vim, fill in with the following:  (change `sfermals.app` to your domain)
 
--------
+
 server {
     listen 80;
     server_name sfermals.app;
@@ -75,7 +75,7 @@ server {
 		proxy_redirect      http://localhost:8080 https://sfermals.app;
 	}
 }
--------
+
 
 2. Verify the config and restart nginx
 
