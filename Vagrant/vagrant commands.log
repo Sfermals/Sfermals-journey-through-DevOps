@@ -4,7 +4,13 @@ vagrant init ubuntu/trusty 64
 
 vagrant init centos/7
 
+vagrant validate
+
 vagrant up
+
+vagrant reload
+
+vagrant suspend
 
 vagrant ssh
 
@@ -31,3 +37,7 @@ vagrant box list
 vagrant box remove your/boxName
 
 vagrant box update
+
+vagrant status 
+
+vagrant global-status
