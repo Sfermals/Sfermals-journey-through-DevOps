@@ -62,19 +62,19 @@
 - In vim, fill in with the following:  (change `sfermals.app` to your domain)
 
 
-server {
-    listen 80;
-    server_name sfermals.app;
+	server {
+		listen 80;
+		server_name sfermals.app;
 
-	location / {
-		include /etc/nginx/proxy_params;
-		proxy_pass          http://localhost:8080;
-		proxy_read_timeout  60s;
-        # Fix the "It appears that your reverse proxy set up is broken" error.
-        # Make sure the domain name is correct
-		proxy_redirect      http://localhost:8080 https://sfermals.app;
+		location / {
+			include /etc/nginx/proxy_params;
+			proxy_pass          http://localhost:8080;
+			proxy_read_timeout  60s;
+			# Fix the "It appears that your reverse proxy set up is broken" error.
+			# Make sure the domain name is correct
+			proxy_redirect      http://localhost:8080 https://sfermals.app;
+		}
 	}
-}
 
 
 2. Verify the config and restart nginx
