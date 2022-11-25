@@ -1,5 +1,0 @@
-name = 'Brandon'
-
-print(name.endswith('n'))
-print(name.capitalize())
-print(name.upper())
